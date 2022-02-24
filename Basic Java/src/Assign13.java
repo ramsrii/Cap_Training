@@ -63,7 +63,7 @@ public class Assign13 {
         }
         else
         {
-            System.out.println("Invalid array size summa");
+            System.out.println("Invalid array size");
         }
     }
 }
