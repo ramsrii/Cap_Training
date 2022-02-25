@@ -52,17 +52,19 @@ class Ticket
 	}
 	
 }
-public interface InterfaceEx {
+public class InterfaceEx {
+	static double d=0;
 	public static CommissionInfo generateCommissionObtained (Ticket ticketObj)
 	{
 		
-		CommissionInfo c=(ticketObj)->{double d=0;String s=ticketObj.getClassType();
+		CommissionInfo c=(t1)->{String s=ticketObj.getClassType();
 		if(s=="SL" || s=="2S" )
-			d+=60;
+			return 60;
 		else 
-			d+=100;
-		return d;};
-		c.calculateCommissionAmount(ticketObj);
+			return 100;
+		};
+		d+=c.calculateCommissionAmount(ticketObj);
+		return c;
 	}
 public static void main(String args[])
 {
@@ -70,17 +72,17 @@ public static void main(String args[])
 	System.out.println("Enter the no of passengers ");
 	int count=s.nextInt();
 	Ticket t1[]=new Ticket[count];
-	for(int i=0;i<=count;i++)
+	for(int i=0;i<count;i++)
 	{
+		t1[i]=new Ticket();
 		System.out.println("Details of passenger no "+(i+1));
-		t1[i].getPnrNo();
-		t1[i].getPassengerName();
-		t1[i].getSeatNo();
-		t1[i].getClassType();
-		t1[i].getTicketFare();
-		
+		//t1[i].setPnrNo(s.nextLong());
+		t1[i].setPassengerName(s.next());
+		t1[i].setSeatNo(s.nextInt());
+		t1[i].setClassType(s.next());
+		t1[i].setTicketFare(s.nextDouble());
 		generateCommissionObtained(t1[i]);}
 	
-	
+	System.out.printf("commission%.2f ",d);
 }
 }
