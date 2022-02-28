@@ -6,6 +6,15 @@ public class MapExample {
 		mi.put(3,"Nayan");
 		mi.put(2,"samantha");
 		mi.put(1,"raashmika");
+		
+		boolean hasValue=mi.containsValue("Nayan");
+		boolean hasKey=mi.containsKey(1);
+		System.out.println(mi.equals(mi));
+		mi.isEmpty();
+		System.out.println(mi.get(3));
+		System.out.println(hasValue);
+		System.out.println(hasKey);
+		mi.clear();
 		//iterating using iterator
 	   Iterator<Map.Entry<Integer,String>> i=mi.entrySet().iterator();
 	    while(i.hasNext())

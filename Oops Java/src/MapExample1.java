@@ -1,5 +1,5 @@
 import java.util.*;
-class student 
+class stud 
 {
 	Map<String,String> stud=new HashMap<String,String>();
 	void input()
@@ -15,7 +15,7 @@ class student
 public class MapExample1 {
 	public static void main(String args[])
 	{
-		student s=new student();
+		stud s=new stud();
 		s.input();
 		Map<String,String> mi=s.getDetails();
 		System.out.println(mi);

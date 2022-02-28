@@ -60,12 +60,20 @@ class Library {
     }
 
     public int countnoofbook(String bname) {
-        return (int) bookList.stream().filter(book -> book.getBookName().contains(bname)).count();
-    }
+		int count=0;
+		for(Book book: this.bookList) {
+			if(book.getBookName().equals(bname)) {
+				count+=1;
+			}
+		}
+		return count;
+	}
 }
 	
-public class ArrayListEx {
-	    public static void main(String[] args) {
+public class ArrayListEx 
+{
+	    public static void main(String[] args)
+	    {
 	        Scanner scanner = new Scanner(System.in);
 	        Library library = new Library();
 
@@ -126,8 +134,7 @@ public class ArrayListEx {
 	                case 4: {
 	                    System.out.println("Enter the book name:");
 	                    String bookName = scanner.nextLine();
-	                    int count = library.countnoofbook(bookName);
-	                    System.out.println(count);
+	                    System.out.println("Count:"+library.countnoofbook(bookName));
 	                }
 	                case 5: {
 	                    System.exit(0);
@@ -135,7 +142,7 @@ public class ArrayListEx {
 	            }
 	        }
 	    }
-	}
+}
 	
 	
 

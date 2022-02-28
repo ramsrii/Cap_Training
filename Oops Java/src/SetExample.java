@@ -14,6 +14,12 @@ public class SetExample
 		al.add("4");
 		al.add("2");
 		al.add("3");
+		
+		ss.add("5");
+		ss.containsAll(al);
+		ss.equals(al);
+		ss.remove(2);
+		
 
 		Set<String> ss1=new TreeSet<String>(ss);
 		Set<String> ss2=new TreeSet<String>(al);
