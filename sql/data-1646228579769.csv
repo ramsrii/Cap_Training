@@ -1,0 +1,4 @@
+"stud_id","stud_name","stud_course","dates","dep_id","dep_name","head"
+1,"ram","python","2022-01-14",1,"ec","alex"
+2,"bharatha","c++","2022-01-12",2,"cs","john"
+3,"lakshmana","c","2022-01-13",3,"ec","sam"
