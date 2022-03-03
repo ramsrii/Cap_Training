@@ -1,4 +1,22 @@
-"stud_id","stud_name","stud_course","dates","dep_id","dep_name","head"
-1,"ram","python","2022-01-14",1,"ec","alex"
-2,"bharatha","c++","2022-01-12",2,"cs","john"
-3,"lakshmana","c","2022-01-13",3,"ec","sam"
+INSERT INTO undergrads VALUES
+	(4,'diva','python');
+DELETE FROM undergrads WHERE stud_id=4;
+SELECT * FROM undergrads;
+UPDATE undergrads SET stud_course='python' WHERE 
+	stud_id=1;
+SELECT * FROM undergrads WHERE stud_name like 'l%';
+ALTER TABLE undergrads ADD dates date;
+UPDATE undergrads SET dates='12-jan-2022' WHERE 
+	stud_id=2;
+UPDATE undergrads SET dates='13-jan-2022' WHERE 
+	stud_id=3;
+UPDATE undergrads SET dates='14-jan-2022' WHERE 
+	stud_id=1;
+select current_date;
+select current_date-dates from undergrads where stud_id=1;
+create table department (dep_id int,dep_name text,head text);
+insert into department values(1,'ec','alex');
+insert into department values(2,'cs','john');
+insert into department values(3,'ec','sam');
+select * from department,undergrads;
+select * from undergrads,department where undergrads.stud_id=department.dep_id;
