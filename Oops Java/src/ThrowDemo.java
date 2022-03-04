@@ -2,7 +2,6 @@
 public class ThrowDemo {
 	public static void main(String args[])
 	{
-		int res=0;
 		try
 		{
 			int den=Integer.parseInt(args[0]);

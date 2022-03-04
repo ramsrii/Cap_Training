@@ -1,17 +1,26 @@
 import java.sql.*;
 import java.util.*;
 import test.Student1;
-public class JDBCEx {	
-	public static void main(String[] args) {
+public class UpdateSQL {	
+	public static void main(String[] args)throws Exception {
 		JdbcCon dbcon=new JdbcCon();
 		Connection con=dbcon.getConnection();
 		
 		List<Student1> studlist=new ArrayList<>();
-		String SQL_SELECT="Select * from student1";
+		String query="Insert into Student1 values(?,?,?,?)";
+		String select="select * from student1";
+		
 		try
 		{
+			PreparedStatement pst=con.prepareStatement(query);
+			
+			pst.setInt(1,145);
+			pst.setString(2,"ram");
+			pst.setString(3,"ram@gamil.com");
+			pst.setInt(4,1122);
+			pst.executeUpdate();
 			Statement st=con.createStatement();
-			ResultSet resultSet=st.executeQuery(SQL_SELECT);
+			ResultSet resultSet=st.executeQuery(select);
 			
 			while(resultSet.next())
 			{
@@ -35,6 +44,7 @@ public class JDBCEx {
 		{
 			e.printStackTrace();
 		}
+		
 		
 	}
 }
