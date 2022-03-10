@@ -4,17 +4,17 @@ public class ExceptionEx2 {
     public String getPriceDetails() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the number of elements in the array");
+        System.out.println("Enter the number of elements");
         int n = sc.nextInt();
         int[] arr = new int[n];
 
-        System.out.println("Enter the price details");
+        System.out.println("Enter the prices");
 
         for (int i = 0; i < n; ++i) {
             try {
                 arr[i] = sc.nextInt();
             } catch (InputMismatchException ignore) {
-                return "Input was not in the correct format";
+                return "pls enter the correct format2";
             }
         }
 
