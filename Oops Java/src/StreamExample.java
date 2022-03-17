@@ -77,16 +77,16 @@ public static void main(String[] args) {
 	}*/
 	//List<Studet> Studentoutput=Studetlist.stream().sorted().collect(Collectors.toList());
 
-	//List<Studet> Studentoutput=Studetlist.stream().sorted((st1,st2) -> st1.name.compareTo(st2.name)).collect(Collectors.toList());
-	//Studentoutput.forEach(System.out::println);
+	List<Studet> Studentoutput=Studetlist.stream().sorted((st1,st2) -> st1.name.compareTo(st2.name)).collect(Collectors.toList());
+	Studentoutput.forEach(System.out::println);
 	
 	
 	//List<Studet> Studentoutput=Studetlist.stream().filter(s->s.weight>=70).sorted((st2,st3) ->Integer.valueOf(st2.regno).compareTo(st3.regno)).collect(Collectors.toList());
 	//Studentoutput.forEach(System.out::println);
 	
 	
-	List<String> Studentoutput=Studetlist.stream().filter(s->s.weight>=70).sorted((st2,st3) ->st2.name.compareTo(st3.name)).map(i->i.name).collect(Collectors.toList());
-	Studentoutput.forEach(System.out::println);
+	//List<String> Studentoutput=Studetlist.stream().filter(s->s.weight>=70).sorted((st2,st3) ->st2.name.compareTo(st3.name)).map(i->i.name).collect(Collectors.toList());
+	//Studentoutput.forEach(System.out::println);
 	
 }
 }
