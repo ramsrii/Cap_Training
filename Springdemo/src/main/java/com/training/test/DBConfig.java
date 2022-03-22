@@ -14,10 +14,10 @@ public class DBConfig {
 		return empdao;
 	}
 	@Bean
-	public DBdao DBdao()
+	public DBUtil DBdao()
 	{
 		System.out.println("Connected");
-		DBdao dbdao = new DBdao();
+		DBUtil dbdao = new DBUtil();
 		dbdao.setDrivername("test1");
 		dbdao.setUsernmae("postgres");
 		dbdao.setPassword("Narayanan.s");

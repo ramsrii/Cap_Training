@@ -3,14 +3,14 @@ package com.training.test;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DBdao {
+public class DBUtil {
 private String drivername,usernmae,password,url;
 
-public DBdao() {
+public DBUtil() {
 	super();
 }
 
-public DBdao(String drivername, String usernmae, String password, String url) {
+public DBUtil(String drivername, String usernmae, String password, String url) {
 	super();
 	this.drivername = drivername;
 	this.usernmae = usernmae;

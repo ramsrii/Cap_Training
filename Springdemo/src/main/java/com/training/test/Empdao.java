@@ -6,19 +6,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class Empdao {
 	@Autowired
-private DBdao obj;
+private DBUtil obj;
 
 	public Empdao() {
 		super();
 	}
-	public Empdao(DBdao obj) {
+	public Empdao(DBUtil obj) {
 		super();
 		this.obj = obj;
 	}
-	public DBdao getobj()
+	public DBUtil getobj()
 	{
 		return obj;}
-	public void setobj(DBdao passObj)
+	public void setobj(DBUtil passObj)
 	{
 		this.obj=passObj;
 	}
