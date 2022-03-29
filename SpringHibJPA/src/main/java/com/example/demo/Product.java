@@ -1,8 +1,20 @@
 package com.example.demo;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Product {
+	@Id
 	int pid;
 	String Pname;
 	String pdesc;
@@ -10,21 +22,7 @@ public class Product {
 	String doexp;
 	String supplier;
 	int qty;
-	
-	public Product()
-	{
-		super();
-	}
-	public Product(int pid, String Pname, String pdesc, String domf, String doexp, String supplier, int qty) {
-		super();
-		this.pid = pid;
-		Pname = Pname;
-		this.pdesc = pdesc;
-		this.domf = domf;
-		this.doexp = doexp;
-		this.supplier = supplier;
-		this.qty = qty;
-	}
+
 	public int getPid() {
 		return pid;
 	}
