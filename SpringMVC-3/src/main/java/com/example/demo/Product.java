@@ -1,23 +1,13 @@
 package com.example.demo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Setter
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
 public class Product {
 	@Id
+	@GeneratedValue
 	int pid;
 	String Pname;
 	String pdesc;

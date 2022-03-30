@@ -12,9 +12,9 @@ public class ProductServiceImpl implements ProductService{
 	ProductRepository repo;
 	
 	@Override
-	public Product saveProduct(Product p)
+	public void saveProduct(Product p)
 	{
-		return null;
+		repo.save(p);
 	}
 	
 	@Override
@@ -27,13 +27,25 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public Product updateProduct(Product p,int pid)
 	{
-		return null;
+		repo.save(p);
+		return p;
+		
+	}
+	
+
+	@Override
+	public Product findById(int id) {
+		Product p = repo.getById(id);
+		return p;
 	}
 	
 	@Override
-	public void deleteProductById(int pid)
-	{
-		
+	public Product deleteById(int id) {
+		Product p = repo.getById(id);
+		repo.deleteById(id);
+		return p;
 	}
+	
+	
 
 }

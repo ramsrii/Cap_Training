@@ -6,14 +6,19 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface ProductService {
-	Product saveProduct(Product p);
+	void saveProduct(Product p);
 	
 	
 	List<Product> fetchProductList();
 	
 	Product updateProduct(Product p,int pid);
 	
-	void deleteProductById(int pid);
+	
+	Product findById(int id);
+
+
+	Product deleteById(int id);
+
 	
 
 }
