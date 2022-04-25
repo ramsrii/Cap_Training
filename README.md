@@ -1,2 +1,2 @@
 # Cap_Training
-These are the assignments and projects i did during my capgemini training.
+These are all the assignments and projects i did during my capgemini training.
